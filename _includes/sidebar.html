@@ -1,0 +1,36 @@
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+<div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+
+  <div>
+    <h4 class="text-white">定时关闭</h4>
+    <select id="myselect">
+      <option value="-1">不开启</option>
+      <option value="300000">5分钟</option>
+      <option value="600000">10分钟</option>
+      <option value="1800000">30分钟</option>
+      <option value="3600000">一小时</option>
+      <option value="7200000">两小时</option>
+    </select>
+    <p></p>
+    <div>
+      <h4 class="text-white">剩余时间</h4>
+      <p class="text-muted" id="remainTime"></p>
+    </div>
+  </div>
+  
+  <div>
+    <button onclick="reset()">复位</button>
+    <p class="text-muted">
+      网页会记忆每个音频播放位置，下次从该位置继续播放.点击复位按钮清除这些记忆
+    </p>
+  </div>
+  
+  <div>
+    <button onclick="back30sec()">后退30秒</button>
+  
+  </div>
+</div>
+{% endif %}
+
+

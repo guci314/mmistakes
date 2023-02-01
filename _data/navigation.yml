@@ -1,9 +1,9 @@
 main:
-  - title: "Posts"
-    url: /posts/
+  - title: "阴符经"
+    url: /阴符经/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About"
+  - title: "About111"
     url: /about/
